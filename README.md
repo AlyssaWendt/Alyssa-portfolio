@@ -1,4 +1,4 @@
-# Alyssa Portfolio Starter (Next.js + TypeScript + Sass)
+# Alyssa Portfolio (Next.js + TypeScript + Sass)
 
 This is a minimal, MDX-free starter designed to look and feel like your previous portfolio but built with Next.js App Router, TypeScript, and Sass.
 
