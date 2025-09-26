@@ -1,0 +1,149 @@
+/*!**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[7].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[14].oneOf[7].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[14].oneOf[7].use[5]!./src/styles/components/hero.module.scss ***!
+  \**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.hero_hero__YwfJr {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  grid-gap: clamp(1.5rem, 4vw, 3rem);
+  gap: clamp(1.5rem, 4vw, 3rem);
+  align-items: center;
+  padding-top: 2rem;
+}
+
+.hero_avatarWrap___u3_d {
+  position: relative;
+  width: 220px;
+  height: 220px;
+}
+.hero_avatarWrap___u3_d .hero_pulse__HZYZV {
+  position: absolute;
+  inset: -6px;
+  border-radius: 999px;
+  background: radial-gradient(60% 60% at 50% 50%, rgba(123, 211, 137, 0.25), transparent);
+  filter: blur(8px);
+  animation: hero_float___4XyX 6s ease-in-out infinite;
+}
+
+@keyframes hero_float___4XyX {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+}
+.hero_avatar__VQAad {
+  border-radius: 999px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  outline: 3px solid rgba(255, 255, 255, 0.08);
+}
+
+.hero_status__rxXi6 {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  width: 16px;
+  height: 16px;
+  border-radius: 999px;
+  background: #7bd389;
+  box-shadow: 0 0 0 3px rgba(123, 211, 137, 0.3);
+}
+
+.hero_copy__kPCY7 h1 {
+  margin: 0 0 0.5rem 0;
+  font-size: clamp(2rem, 5vw, 3rem);
+}
+
+.hero_copy__kPCY7 p {
+  margin: 0 0 1.5rem 0;
+}
+
+.hero_ctaRow__1Sz8b {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.hero_cta__SH_X6 {
+  padding: 0.7rem 1rem;
+  border-radius: 0.8rem;
+  background: linear-gradient(135deg, rgba(123, 211, 137, 0.25), rgba(123, 211, 137, 0.05));
+  outline: 2px solid rgba(123, 211, 137, 0.35);
+  transition: transform 0.15s ease;
+}
+
+.hero_cta__SH_X6:hover {
+  transform: translateY(-1px);
+}
+
+.hero_link__Y6W7q {
+  color: #9aa4b2;
+  text-decoration: underline;
+  -webkit-text-decoration-color: rgba(255, 255, 255, 0.2);
+          text-decoration-color: rgba(255, 255, 255, 0.2);
+}
+
+.hero_socials__IEsB7 {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+  padding: 0;
+  list-style: none;
+}
+.hero_socials__IEsB7 li a {
+  padding: 0.35rem 0.6rem;
+  border-radius: 0.5rem;
+  background: rgba(255, 255, 255, 0.03);
+}
+.hero_socials__IEsB7 li a:focus-visible {
+  outline: 0 0 0 3px rgba(123, 211, 137, 0.3);
+}
+
+html.light .hero_avatar__VQAad {
+  outline: 1px solid #c2bbc8;
+}
+html.light .hero_avatarWrap___u3_d .hero_pulse__HZYZV {
+  background: radial-gradient(60% 60% at 50% 50%, rgba(202, 146, 245, 0.2196078431), transparent);
+}
+html.light .hero_cta__SH_X6 {
+  background: linear-gradient(135deg, rgba(189, 123, 211, 0.25), rgba(180, 123, 211, 0.05));
+  outline: 2px solid rgba(117, 27, 185, 0.4509803922);
+}
+html.light .hero_socials__IEsB7 li a {
+  background: rgb(255, 255, 255);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 5px 10px 5px rgba(0, 0, 0, 0.25);
+}
+html.light .hero_socials__IEsB7 li a:focus-visible {
+  outline: 0 0 0 3px rgba(123, 211, 138, 0.833);
+}
+
+@media (max-width: 780px) {
+  .hero_hero__YwfJr {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+  }
+  .hero_copy__kPCY7 {
+    max-width: 52ch;
+  }
+}
+/*!***************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[7].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[14].oneOf[7].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[14].oneOf[7].use[5]!./src/styles/components/home-work.module.scss ***!
+  \***************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.home-work_grid__xsQkS {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1.5rem;
+  gap: 1.5rem;
+}
+@media (max-width: 960px) {
+  .home-work_grid__xsQkS {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 640px) {
+  .home-work_grid__xsQkS {
+    grid-template-columns: 1fr;
+  }
+}

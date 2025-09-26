@@ -1,0 +1,35 @@
+@use '@/styles/tokens' as *;
+
+:root { color-scheme: dark }
+
+html, body { margin: 0; padding: 0; }
+
+html.dark {
+  background: $bg;
+  color: $fg;
+}
+html.light {
+  background: #fff;
+  color: #222;
+}
+
+* { box-sizing: border-box }
+a { color: inherit; text-decoration: none }
+img { display: block; max-width: 100%; height: auto }
+
+.container {
+	max-width: $maxw;
+	margin: 0 auto;
+	padding: $space-5 $space-3;
+}
+
+.section { margin-top: 4rem }
+.subtle { color: $muted }
+.card {
+	background: rgba(255,255,255,.03);
+	border-radius: $radius-2xl;
+	box-shadow: $shadow-soft;
+	padding: $space-4;
+}
+.focusable { outline: 2px solid transparent; transition: outline-color .2s ease }
+.focusable:focus-visible { outline-color: $accent }

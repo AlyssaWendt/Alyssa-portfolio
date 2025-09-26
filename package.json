@@ -1,0 +1,26 @@
+{
+  "name": "alyssa-portfolio-starter",
+  "version": "1.0.0",
+  "description": "This is a minimal, MDX-free starter designed to look and feel like your previous portfolio but built with Next.js App Router, TypeScript, and Sass.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "next": "^15.5.0",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1"
+  },
+  "devDependencies": {
+    "@types/node": "^24.3.0",
+    "@types/react": "^19.1.11",
+    "sass": "^1.90.0",
+    "typescript": "^5.9.2"
+  }
+}

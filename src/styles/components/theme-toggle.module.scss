@@ -1,0 +1,18 @@
+.themeToggleBtn {
+    background: rgba(255,255,255,.08);
+    border-radius: 12px;
+    inset-block-end: 32px;
+    inset-inline-end: 32px;
+    padding: 10px 13px;
+    position: fixed;
+    z-index: 1000;
+
+    @media (max-width: 640px) {
+        display: block;
+        margin-block-start: 32px;
+        margin-inline-end: 16px;
+        margin-inline-start: auto;
+        position: static;
+        width: fit-content;
+    }
+}
