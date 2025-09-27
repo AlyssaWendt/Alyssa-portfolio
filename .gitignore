@@ -1,0 +1,29 @@
+# Node
+node_modules/
+.next/
+
+# Logs
+npm-debug.log*
+
+# OS
+.DS_Store
+
+# Env
+.env*
+
+# Editor
+.vscode/
+.idea/
+*.swp
+
+# Build
+out/
+
+# Misc
+package-lock.json
+
+# Test
+coverage/
+
+# Mac
+Icon?

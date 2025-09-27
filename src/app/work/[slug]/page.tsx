@@ -14,9 +14,13 @@ export async function generateMetadata({ params }: { params: { slug: string } })
 	}
 }
 
-export default function ProjectPage({ params }: { params: { slug: string } }) {
-	const project = projects.find(p => p.slug === params.slug)
-	if (!project) return <main><p>Not found</p></main>
+
+
+// PageProps is a global type from .next/types/routes.d.ts
+export default async function ProjectPage({ params }: { params: Promise<{ slug: string }> }) {
+	const { slug } = await params;
+	const project = projects.find(p => p.slug === slug);
+	if (!project) return <main><p>Not found</p></main>;
 
 	return (
 		<main className='section'>
@@ -40,5 +44,5 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
 				{project.demo && <a href={project.demo}>Live</a>}
 			</div>
 		</main>
-	)
+	);
 }
