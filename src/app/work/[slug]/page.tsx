@@ -6,18 +6,16 @@ export async function generateStaticParams() {
 	return projects.map(p => ({ slug: p.slug }))
 }
 
-export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
-	const project = projects.find(p => p.slug === params.slug)
-	return {
-		title: project ? `${project.title} – Alyssa Wendt` : 'Work – Alyssa Wendt',
-		description: project?.blurb
-	}
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+    const { slug } = await params;
+    const project = projects.find(p => p.slug === slug);
+    return {
+        title: project ? `${project.title} – Alyssa Wendt` : 'Work – Alyssa Wendt',
+        description: project?.blurb
+    };
 }
 
-
-
-// PageProps is a global type from .next/types/routes.d.ts
-export default async function ProjectPage({ params }: { params: Promise<{ slug: string }> }) {
+export default async function ProjectPage({ params }: { params: any }) {
 	const { slug } = await params;
 	const project = projects.find(p => p.slug === slug);
 	if (!project) return <main><p>Not found</p></main>;
