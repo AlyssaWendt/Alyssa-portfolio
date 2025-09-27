@@ -31,5 +31,21 @@ img { display: block; max-width: 100%; height: auto }
 	box-shadow: $shadow-soft;
 	padding: $space-4;
 }
-.focusable { outline: 2px solid transparent; transition: outline-color .2s ease }
-.focusable:focus-visible { outline-color: $accent }
+.focusable {
+	position: absolute;
+	left: -9999px;
+	top: auto;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+	outline: 2px solid transparent;
+	transition: outline-color .2s ease;
+}
+.focusable:focus-visible {
+	position: static;
+	left: auto;
+	width: auto;
+	height: auto;
+	overflow: visible;
+	outline-color: $accent;
+}
