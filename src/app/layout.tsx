@@ -10,13 +10,27 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
 	return (
-		<html lang='en'>
+		<html lang='en' suppressHydrationWarning>
 			<body>
+				<script
+					dangerouslySetInnerHTML={{
+						__html: `
+							(function() {
+								try {
+									var theme = localStorage.getItem('theme');
+									var dark = theme !== 'light';
+									document.documentElement.classList.toggle('dark', dark);
+									document.documentElement.classList.toggle('light', !dark);
+								} catch (e) {}
+							})();
+						`
+					}}
+				/>
 				<a className='focusable' href='#main'>Skip to content</a>
 				<Nav />
 				<main id='main' className='container'>{children}</main>
 				<ThemeToggle />
 			</body>
-			</html>
+		</html>
 	)
 }

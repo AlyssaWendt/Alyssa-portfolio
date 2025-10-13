@@ -1,23 +1,19 @@
 export type Project = {
-	slug: string
-	title: string
 	blurb: string
-	tech: string[]
-	repo?: string
-	demo?: string
-	impact?: string[]
 	cover?: string
+	demo?: string
+	repo?: string
+	tech: string[]
+	title: string
 }
 
 export const projects: Project[] = [
 	{
-		slug: 'ev-estimator',
-		title: 'EV Cost Savings Estimator',
-		blurb: 'React build with typed inputs and live savings math.',
-		tech: ['React', 'TypeScript', 'Sass'],
-		repo: 'https://github.com/AlyssaWendt/ev-estimator',
+		blurb: 'React app to compare electric vehicle savings against average gas vehicles.',
+		cover: 'cover.png',
 		demo: 'https://ev-estimator.vercel.app',
-		impact: ['80% unit test coverage', 'CLS 0.00', '40% smaller bundle'],
-		cover: '/og/ev-estimator.png'
+		repo: 'https://github.com/AlyssaWendt/ev-estimator',
+		tech: ['React', 'TypeScript', 'Sass'],
+		title: 'EV Cost Savings Estimator'
 	}
 ]

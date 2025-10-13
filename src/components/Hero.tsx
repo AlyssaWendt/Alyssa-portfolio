@@ -14,14 +14,12 @@ export default function Hero() {
 					className={styles.avatar}
 					priority
 				/>
-				<span className={styles.status} title='Available for work' />
 			</div>
 
 			<div className={styles.copy}>
 				<h1>Hi, I’m Alyssa.</h1>
-				<p className='subtle'>
-					Frontend engineer crafting clear, accessible interfaces. Former GM (AEM/TS).
-					Army Reserve (25B).
+				<p className='subtle'>Frontend engineer passionate about building accessible, intuitive user experiences. Proud soldier in United States Army Reserve (25B).
+					
 				</p>
 
 				<div className={styles.ctaRow}>
@@ -32,7 +30,7 @@ export default function Hero() {
 				<ul className={styles.socials} aria-label='Social links'>
 					<li><a href='https://github.com/AlyssaWendt' aria-label='GitHub'>GitHub</a></li>
 					<li><a href='https://www.linkedin.com/in/alyssa-wendt/' aria-label='LinkedIn'>LinkedIn</a></li>
-					<li><a href='/Alyssa-Wendt-Resume.pdf' aria-label='Resume'>Resume</a></li>
+					<li><a href='/Resume-Portfolio.pdf' aria-label='Resume' target='_blank' rel='noopener noreferrer'>Resume</a></li>
 				</ul>
 			</div>
 		</section>

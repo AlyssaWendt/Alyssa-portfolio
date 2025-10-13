@@ -1,0 +1,97 @@
+
+@use '@/styles/tokens' as *;
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(3, 1fr));
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+.card {
+    background: rgba(133, 135, 140, 0.18);
+	border: 1px solid var(--accent, #{$accent});
+    border-radius: 1.5rem;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform .15s ease, box-shadow .15s ease;
+    width: 380px;
+
+    &:hover, &:focus-within {
+        transform: translateY(-4px);
+        box-shadow: $shadow-soft;
+    }
+
+    .cardDetails {
+        max-height: 0;
+        opacity: 0;
+        overflow: hidden;
+        transition: max-height 0.3s, opacity 0.3s;
+    }
+
+    .cover {
+        height: 160px;
+        object-fit: cover;
+        width: 100%;
+    }
+
+    .cta-group {
+        display: flex;
+        gap: 1rem;
+        margin-top: 1rem;
+    }
+    .cta {
+        background: linear-gradient(135deg, rgba(147,197,253,.26), rgba(147,197,253,.08)), #181818;
+        color: #fff;
+        border: 1px solid rgba(147, 196, 253, 0.475);
+        padding: .7rem 1.2rem;
+        border-radius: .8rem;
+        font-weight: 400;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: transform .15s ease, background 0.2s, color 0.2s;
+        display: inline-block;
+        width: auto;
+        margin: 0;
+    }
+    .cta:hover, .cta:focus {
+        transform: translateY(-1px);
+    }
+}
+
+.card:hover .cardDetails,
+.card:focus-within .cardDetails {
+    max-height: 200px;
+    opacity: 1;
+}
+
+
+
+:global(html.light){
+    .grid {
+        .card{
+            background: rgb(255, 255, 255);
+			border: 1px solid rgba(0, 0, 0, 0.1);
+			box-shadow: 5px 10px 5px rgba(0, 0, 0, 0.25);
+			color: black;
+            
+            .cover {
+                border-radius: .25rem;
+            }
+
+            .cta-group {
+                display: flex;
+                gap: 1rem;
+                margin: 1rem 0 0.5rem 0.0625rem;
+            }
+
+            .cta {
+                background: linear-gradient(135deg, rgba(37, 100, 235, 0.5) 60%, rgba(147, 196, 253, 0.26) 100%);
+                outline: 1px solid rgba(37,99,235,0.85);
+                color: #fff;
+            }
+        }
+    }
+}

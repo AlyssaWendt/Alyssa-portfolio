@@ -1,0 +1,89 @@
+@use '@/styles/tokens' as *;
+
+.aboutGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 80px 1fr 40px 1fr 80px;
+  position: relative;
+  min-height: 700px;
+}
+
+.aboutContainer {
+	position: relative;
+	background: var(--surface,rgba(147,197,253,0.3));
+	border-radius: 1rem;
+	padding: 2.5rem 2rem;
+	box-shadow: $shadow-soft;
+	overflow: hidden;
+	min-width: 320px;
+	opacity: 0;
+	transform: translateX(0);
+	animation: containerIn 0.8s cubic-bezier(.7,.2,.3,1) forwards;
+
+}
+
+.professional {
+	grid-column: 1;
+	grid-row: 2;
+	z-index: 2;
+	animation-name: containerInLeft;
+
+	p, li {
+		letter-spacing: 2px;
+		line-height: 20px;
+	}
+}
+
+.personal {
+	grid-column: 2;
+	grid-row: 4;
+	z-index: 2;
+	animation-name: containerInRight;
+
+	p {
+		letter-spacing: 2px;
+		line-height: 25px;
+	}
+}
+
+.aboutContainer.personal {
+	@keyframes containerInLeft {
+		from { opacity: 0; transform: translateX(-60px); }
+		to { opacity: 1; transform: translateX(0); }
+	}
+	@keyframes containerInRight {
+		from { opacity: 0; transform: translateX(60px); }
+		to { opacity: 1; transform: translateX(0); }
+	}
+}
+
+.leftImageContainer {
+	position: absolute;
+	top: -25px;
+	right: 440px;
+	width: 300px;
+	z-index: 10;
+	animation-name: containerInLeft;
+  
+}
+
+.rightImageContainer {
+  position: absolute;
+  bottom: 30px;
+  left: 460px;
+  width: 130px;
+  animation-name: containerInRight;
+  z-index: 10;
+}
+
+:global(html.light){
+	.aboutContainer {
+		background: var(--surface,rgba(90, 118, 151, 0.773));
+	}
+}
+	
+
+
+
+
+

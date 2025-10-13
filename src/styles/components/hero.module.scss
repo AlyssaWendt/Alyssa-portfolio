@@ -6,17 +6,19 @@
 	gap: clamp($space-4, 4vw, 3rem);
 	align-items: center;
 	padding-top: 2rem;
+	margin-top: 8rem;
 }
 
 .avatarWrap {
 	position: relative; 
 	width: 220px; 
 	height: 220px;
+
 	.pulse {
 		position: absolute; 
 		inset: -6px;
 		border-radius: 999px;
-		background: radial-gradient(60% 60% at 50% 50%, rgba(123,211,137,.25), transparent);
+		background: radial-gradient(60% 60% at 50% 50%, rgba(147,197,253,.38), transparent); // lighter blue
 		filter: blur(8px); 
 		animation: float 6s ease-in-out infinite;
 	}
@@ -30,34 +32,43 @@
 .avatar {
 	border-radius: 999px;
 	box-shadow: $shadow-soft;
-	outline: 3px solid rgba(255,255,255,.08);
+	outline: 1px solid var(--accent, #{$accent});
 }
 
-.status {
-	position: absolute; 
-	right: 10px; 
-	bottom: 10px;
-	width: 16px; 
-	height: 16px; 
-	border-radius: 999px;
-	background: $accent; 
-	box-shadow: 0 0 0 3px rgba(123,211,137,.3);
+
+.copy h1 {
+	margin: 0 0 .5rem 0; 
+	font-size: clamp(2rem, 5vw, 3rem) 
 }
 
-.copy h1 { margin: 0 0 .5rem 0; font-size: clamp(2rem, 5vw, 3rem) }
-.copy p { margin: 0 0 $space-4 0 }
+.copy p { 
+	margin: 0 0 $space-4 0 
+}
 
-.ctaRow { display: flex; gap: $space-3; align-items: center }
+.ctaRow { 
+	display: flex; 
+	gap: $space-3; 
+	align-items: center 
+}
 
 .cta {
-	padding: .7rem 1rem; border-radius: .8rem;
-	background: linear-gradient(135deg, rgba(123,211,137,.25), rgba(123,211,137,.05));
-	outline: 2px solid rgba(123,211,137,.35);
+	background: linear-gradient(135deg, rgba(147,197,253,.26), rgba(147,197,253,.08));
+	color: #fff;
+	outline: 2px solid rgba(147,197,253,.34);
+	padding: .7rem 1rem; 
+	border-radius: .8rem;
 	transition: transform .15s ease;
 }
-.cta:hover { transform: translateY(-1px) }
 
-.link { color: $muted; text-decoration: underline; text-decoration-color: rgba(255,255,255,.2) }
+.cta:hover { 
+	transform: translateY(-1px) 
+}
+
+.link { 
+	color: $muted; 
+	text-decoration: underline; 
+	text-decoration-color: $muted;
+}
 
 .socials {
 	display: flex; 
@@ -65,45 +76,56 @@
 	margin-top: $space-3; padding: 0; 
 	list-style: none;
 
-		li a { 
-			padding: .35rem .6rem; 
-			border-radius: .5rem; 
-			background: rgba(255,255,255,.03); 
-		}
+	li a { 
+		padding: .35rem .6rem; 
+		border-radius: .5rem; 
+		background: rgba(133, 135, 140, 0.18);
+		border: 1px solid rgba(147,197,253,0.22);
+		color: #e7e9ec;
+		transition: background 0.2s, border 0.2s;
+	}
 
-		li a:focus-visible { 
-			outline: $ring 
-		}
+	li a:focus-visible { 
+		outline: $ring 
+	}
 }
 
 // theme override
 :global(html.light){
-	.avatar {
-		outline: 1px solid #c2bbc8; // solid green border for light mode
-	}
-
 	.avatarWrap{
 		.pulse {
-		background: radial-gradient(60% 60% at 50% 50%, #ca92f538, transparent); // softer green
+			background: radial-gradient(60% 60% at 50% 50%, rgba(147,197,253,0.38), transparent); // lighter blue
 		}
 	}
+
 	.cta {
-		background: linear-gradient(135deg, rgba(189, 123, 211, 0.25), rgba(180, 123, 211, 0.05));
-		outline: 2px solid #751bb973;	
+		background: linear-gradient(135deg, rgba(37, 100, 235, 0.5) 60%, rgba(147, 196, 253, 0.26) 100%);
+		outline: 2px solid rgba(37,99,235,0.85);
+		color: #fff;
 	}	
+
 	.socials {
 		li a { 
 			background: rgb(255, 255, 255);
 			border: 1px solid rgba(0, 0, 0, 0.1);
-			box-shadow: 5px 10px 5px rgba(0, 0, 0, 0.25); 
+			box-shadow: 5px 10px 5px rgba(0, 0, 0, 0.25);
+			color: black; 
 		}
+
 		li a:focus-visible { 
-			outline:  0 0 0 3px rgba(123, 211, 138, 0.833);
+			outline:  0 0 0 3px rgba(147,197,253,0.5);
 		}
 	}
 }
 
 @media (max-width: 780px) {
-	.hero { grid-template-columns: 1fr; justify-items: center; text-align: center }
-	.copy { max-width: 52ch }
+	.hero { 
+		grid-template-columns: 
+		1fr; justify-items: center; 
+		text-align: center 
+	}
+
+	.copy { 
+		max-width: 52ch 
+	}
 }
