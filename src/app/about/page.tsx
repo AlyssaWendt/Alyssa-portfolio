@@ -1,37 +1,52 @@
 import styles from '@/styles/components/about.module.scss';
+import { workHistory, funFacts, skills } from '@/data/about';
 
 export default function AboutPage() {
 	return (
-		<section className='section'>
-			<h1>About Me!</h1>
-			<div className={styles.aboutGrid}>
-				{/* Top right image */}
-				<img src="/images/about-avatar.png" alt="Alyssa Wendt professional photo" className={styles.leftImageContainer} aria-hidden />
+		<section className="section container">
 
-				{/* Professional container, higher */}
-				<div className={styles.aboutContainer + ' ' + styles.professional}>
-					<h2>My Work</h2>
-					<p>
-						Frontend engineer with 3 years of experience who just loves building cool websites. I enjoy turning ideas into interactive, user-friendly experiences and making the web more fun for everyone.
-					</p>
-					<ul>
-						<li>General Motors - Software Engineer for Global Digital Platforms</li>
-						<li>United States Army Reserve - IT Specialist (25B)</li>
-						<li>Little Caesars Enterprises - Help Desk Representative </li>
-					</ul>
+			{/* Work History */}
+			<section aria-label="Work history" className={styles.workSection}>
+				<h2 className={styles.sectionTitle}>Work History</h2>
+				<div className={styles.workGrid}>
+					{workHistory.map((job) => (
+						<div key={job.company} className={styles.workCard}>
+							<img src={job.logo} alt={job.company + ' logo'} className={styles.workLogo} />
+							<h3 className={styles.workCompany}>{job.company}</h3>
+							<div className={styles.workRole}>{job.role}</div>
+							<div className={styles.workYears}>{job.years}</div>
+							<div className={styles.workHighlight}>{job.highlight}</div>
+						</div>
+					))}
 				</div>
+			</section>
 
-				{/* Personal container, lower */}
-				<div className={styles.aboutContainer + ' ' + styles.personal}>
-					<h2>Outside of Work</h2>
-					<p>
-						When I'm not coding, you'll usually find me at home—curled up with a good book, catching up on my favorite shows, or hanging out with my family and my dog, Bodhi. I love the simple joys of downtime and making the most of cozy nights in.
-					</p>
+			{/* Fun Facts */}
+			<section aria-label="Fun facts" className={styles.factsSection}>
+				<h2 className={styles.sectionTitle}>Fun Facts</h2>
+				<div className={styles.factsGrid}>
+					{funFacts.map((fact) => (
+						<div key={fact.label} className={styles.factCard}>
+							{fact.icon.startsWith('/images/') ? (
+								<img src={fact.icon} alt={fact.label} className={styles.factIcon} style={{ width: 40, height: 40, borderRadius: '50%' }} />
+							) : (
+								<span className={styles.factIcon} aria-hidden>{fact.icon}</span>
+							)}
+							<span className={styles.factLabel}>{fact.label}</span>
+						</div>
+					))}
 				</div>
+			</section>
 
-				{/* Bottom left image */}
-				<img src="/images/bodhi-avatar.png" alt="Bodhi personal photo" className={styles.rightImageContainer} aria-hidden />
-			</div>
+			{/* Skills */}
+			<section aria-label="Skills" className={styles.skillsSection}>
+				<h2 className={styles.sectionTitle}>Skills</h2>
+				<div className={styles.skillsGrid}>
+					{skills.map((skill) => (
+						<span key={skill} className={styles.skillTag}>{skill}</span>
+					))}
+				</div>
+			</section>
 		</section>
-	)
+	);
 }

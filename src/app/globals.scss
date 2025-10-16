@@ -1,7 +1,8 @@
 @use '@/styles/tokens' as *;
 
 :root { 
-	color-scheme: light dark 
+	color-scheme: light dark;
+		--accent-bg-secondary: #eaf3ff;
 }
 
 html, body { 
@@ -12,12 +13,15 @@ html, body {
 html.dark {
 	background: $bg;
 	color: $fg;
+	--accent: #93c5fd;
+	--accent-bg-secondary: #223a5f;
 }
 
 html.light {
 	background: #fff;
 	color: #222;
 	--accent: #2563eb;
+	--accent-bg-secondary: #eaf3ff;
 }
 
 * { 

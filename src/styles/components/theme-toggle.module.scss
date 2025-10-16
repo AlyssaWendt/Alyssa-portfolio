@@ -16,3 +16,9 @@
         width: fit-content;
     }
 }
+
+
+:global(html.light) .themeToggleBtn {
+    box-shadow: -2px 0 8px 0 rgba(37,99,235,0.13), 0 1.5px 4px 0 rgba(0,0,0,0.07);
+    border: 2px solid #d5d7d8;
+}

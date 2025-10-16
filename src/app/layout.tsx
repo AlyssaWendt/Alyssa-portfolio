@@ -2,15 +2,18 @@ import type { Metadata } from 'next'
 import './globals.scss'
 import Nav from '@/components/Nav'
 import ThemeToggle from '@/components/ThemeToggle'
+import { Inter } from 'next/font/google'
 
 export const metadata: Metadata = {
 	title: 'Alyssa Wendt – Frontend Engineer',
 	description: 'Clean, accessible interfaces. Army Reserve (25B).'
 }
 
+const inter = Inter({ subsets: ['latin'], weight: ['400', '700'] })
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
 	return (
-		<html lang='en' suppressHydrationWarning>
+		 <html lang='en' suppressHydrationWarning className={`${inter.className}`}>
 			<body>
 				<script
 					dangerouslySetInnerHTML={{

@@ -1,89 +1,191 @@
 @use '@/styles/tokens' as *;
 
-.aboutGrid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 80px 1fr 40px 1fr 80px;
-  position: relative;
-  min-height: 700px;
-}
 
 .aboutContainer {
-	position: relative;
-	background: var(--surface,rgba(147,197,253,0.3));
-	border-radius: 1rem;
-	padding: 2.5rem 2rem;
-	box-shadow: $shadow-soft;
-	overflow: hidden;
-	min-width: 320px;
+	background: bg;
+	border-radius: 1.5rem;
+	border: 1px solid var(--accent, #{$accent});
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	padding: 1.5rem;
+	transition: transform .15s ease, box-shadow .15s ease;
+	width: 100%;
+
+	&:hover, &:focus-within {
+		box-shadow: var(--accent-shadow, $shadow-soft);
+		transform: translateY(-4px);
+	}
+}
+
+.workSection, .factsSection, .skillsSection {
+	margin-block-end: 2.5rem;
+}
+
+.sectionTitle {
+	font-size: 2rem;
+	font-weight: 700;
+	margin-block-end: 1.5rem;
+	text-align: center;
+}
+
+.workGrid {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 2rem;
+	justify-content: center;
+}
+
+.workCard {
+	@extend .aboutContainer;
+	animation: none;
+	flex: 1 1 260px;
+	max-width: 320px;
+	min-width: 260px;
+	opacity: 1;
+	text-align: center;
+}
+
+.workLogo {
+	background: var(--accent-bg-secondary, #fff);
+	border-radius: 8px;
+	height: 48px;
+	margin-block-end: 8px;
+	object-fit: contain;
+	width: 48px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.workCompany {
+	font-size: 1.2rem;
+	margin: 0.5rem 0 0.25rem 0;
+}
+
+.workRole {
+	color: var(--accent, #2563eb);
+	font-weight: 500;
+}
+
+.workYears {
+	color: var(--accent-muted, $muted);
+	font-size: 0.95rem;
+	margin-bottom: 4px;
+}
+
+.workHighlight {
+	font-size: 0.95rem;
+}
+
+.factsGrid {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1.5rem;
+	justify-content: center;
+}
+
+.factCard {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	border-radius: 0.8rem;
+	font-size: 2rem;
+	min-width: 100px;
+	padding: 1.2rem 2rem;
+	box-shadow: 0 2px 8px 0 rgba(37,99,235,0.10), 0 1.5px 4px 0 rgba(0,0,0,0.07);
+	text-shadow: 0 1px 6px rgba(37,99,235,0.10), 0 1px 1px rgba(0,0,0,0.06);
+	outline: 1.5px solid transparent;
+	color: var(--accent, #2563eb);
+	background: var(--accent-bg-secondary, rgba(147,197,253,0.13));
+	transition: box-shadow .15s, background .15s;
+}
+
+
+
+.factIcon {
+	font-size: 2rem;
+}
+
+.factLabel {
+	color: var(--accent-muted, $muted);
+	font-size: 1rem;
+	margin-top: 8px;
+}
+
+.skillsGrid {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.75rem;
+	justify-content: center;
+}
+
+
+.skillTag {
+	font-size: 1rem;
+	font-weight: 600;
+	letter-spacing: 0.01em;
+	border-radius: 0.8rem;
+	margin-block-end: 0.5rem;
+	padding: 0.5rem 1.1rem;
+	box-shadow: 0 2px 8px 0 rgba(37,99,235,0.10), 0 1.5px 4px 0 rgba(0,0,0,0.07);
+	text-shadow: 0 1px 6px rgba(37,99,235,0.18), 0 1px 1px rgba(0,0,0,0.08);
 	opacity: 0;
-	transform: translateX(0);
-	animation: containerIn 0.8s cubic-bezier(.7,.2,.3,1) forwards;
-
+	transform: translateY(12px) scale(0.98);
+	animation: skillTagFadeIn 0.7s cubic-bezier(.33,1.2,.68,1) forwards;
+	background: var(--accent-bg-secondary, rgba(37,99,235,0.08));
+	outline: 1.5px solid transparent;
+	color: var(--accent, #2563eb);
 }
 
-.professional {
-	grid-column: 1;
-	grid-row: 2;
-	z-index: 2;
-	animation-name: containerInLeft;
-
-	p, li {
-		letter-spacing: 2px;
-		line-height: 20px;
+@keyframes skillTagFadeIn {
+	0% {
+		opacity: 0;
+		transform: translateY(12px) scale(0.98);
+	}
+	60% {
+		opacity: 1;
+		transform: translateY(-2px) scale(1.03);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0) scale(1);
 	}
 }
 
-.personal {
-	grid-column: 2;
-	grid-row: 4;
-	z-index: 2;
-	animation-name: containerInRight;
-
-	p {
-		letter-spacing: 2px;
-		line-height: 25px;
+:global(html.light) {
+	.factCard {
+		background: rgb(255, 255, 255);
+		border: 1px solid rgba(0, 0, 0, 0.1);
+		box-shadow: 5px 10px 5px rgba(0, 0, 0, 0.25);
 	}
-}
 
-.aboutContainer.personal {
-	@keyframes containerInLeft {
-		from { opacity: 0; transform: translateX(-60px); }
-		to { opacity: 1; transform: translateX(0); }
+	.skillTag {
+		background: linear-gradient(135deg, rgba(37, 100, 235, 0.72) 60%, rgba(147, 196, 253, 0.18) 100%);
+		outline: 1.5px solid rgba(37,99,235,0.85);
+		color: #fff;
+		box-shadow: 0 2px 8px 0 rgba(37,99,235,0.10), 0 1.5px 4px 0 rgba(0,0,0,0.07);
+		text-shadow: 0 1px 6px rgba(37,99,235,0.18), 0 1px 1px rgba(0,0,0,0.08);
+		font-weight: 600;
+		letter-spacing: 0.01em;
+		border-radius: 0.8rem;
 	}
-	@keyframes containerInRight {
-		from { opacity: 0; transform: translateX(60px); }
-		to { opacity: 1; transform: translateX(0); }
-	}
+		
 }
 
-.leftImageContainer {
-	position: absolute;
-	top: -25px;
-	right: 440px;
-	width: 300px;
-	z-index: 10;
-	animation-name: containerInLeft;
-  
+:global(html.dark) {
+		.factCard {
+			background: #181818;
+			border: 1px solid var(--accent, #{$accent});
+			color: #93c5fd;
+		}
+		.skillTag {
+			background: linear-gradient(135deg, rgba(147,197,253,.26), rgba(147,197,253,.08)), #181818;
+			color: #fff;
+			border: 1px solid rgba(147, 196, 253, 0.475);
+			padding: .7rem 1.2rem;
+			border-radius: .8rem;
+			font-weight: 400;
+			font-size: 1rem;
+		}
 }
-
-.rightImageContainer {
-  position: absolute;
-  bottom: 30px;
-  left: 460px;
-  width: 130px;
-  animation-name: containerInRight;
-  z-index: 10;
-}
-
-:global(html.light){
-	.aboutContainer {
-		background: var(--surface,rgba(90, 118, 151, 0.773));
-	}
-}
-	
-
-
-
-
-
