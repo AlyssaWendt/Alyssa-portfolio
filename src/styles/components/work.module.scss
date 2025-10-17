@@ -3,9 +3,10 @@
 
 .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(3, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
     padding: 2rem 0;
+    justify-content: center;
 }
 
 .card {
@@ -17,7 +18,8 @@
     flex-direction: column;
     justify-content: space-between;
     transition: transform .15s ease, box-shadow .15s ease;
-    width: 380px;
+    width: 100%;
+    max-width: 380px;
 
     &:hover, &:focus-within {
         transform: translateY(-4px);
