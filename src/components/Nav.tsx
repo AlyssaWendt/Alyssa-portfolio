@@ -12,7 +12,7 @@ export default function Nav() {
 		<header className={styles.header}>
 			<nav className={styles.nav} aria-label='Primary'>
 				<Link aria-current={is('/') ? 'page' : undefined} href='/'>Home</Link>
-				<Link aria-current={is('/work') ? 'page' : undefined} href='/work'>Work</Link>
+				<Link aria-current={is('/projects') ? 'page' : undefined} href='/projects'>Projects</Link>
 				<Link aria-current={is('/about') ? 'page' : undefined} href='/about'>About</Link>
 			</nav>
 		</header>

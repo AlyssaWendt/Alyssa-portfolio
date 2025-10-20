@@ -23,7 +23,7 @@ export default function Hero() {
 				</p>
 
 				<div className={styles.ctaRow}>
-					<a className={styles.cta} href='/work'>View work</a>
+					<a className={styles.cta} href='/projects'>View Projects</a>
 					<a className={styles.link} href='mailto:alyssa95wendt@gmail.com'>Email me</a>
 				</div>
 

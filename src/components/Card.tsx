@@ -1,5 +1,5 @@
 
-import styles from '@/styles/components/work.module.scss'
+import styles from '@/styles/components/projects.module.scss'
 import { projects } from '@/data/projects'
 
 export default function Card() {

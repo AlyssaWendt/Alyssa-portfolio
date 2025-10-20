@@ -50,9 +50,9 @@ npm run dev
 
 ## 📄 Pages
 - `/` – Home: Hero, featured work
-- `/work` – All projects
+- `/projects` – All projects
 - `/about` – About you
-- `/contact` – Contact info
+
 
 ---
 
