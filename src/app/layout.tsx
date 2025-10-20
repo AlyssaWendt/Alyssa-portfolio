@@ -5,7 +5,7 @@ import ThemeToggle from '@/components/ThemeToggle'
 import { Inter } from 'next/font/google'
 
 export const metadata: Metadata = {
-	title: 'Alyssa Wendt – Frontend Engineer',
+	title: 'Alyssa Wendt – Software Engineer',
 	description: 'Clean, accessible interfaces. Army Reserve (25B).'
 }
 

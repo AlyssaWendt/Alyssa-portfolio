@@ -17,8 +17,8 @@ export default function Hero() {
 			</div>
 
 			<div className={styles.copy}>
-				<h1>Hi, I’m Alyssa.</h1>
-				<p className='subtle'>Frontend engineer passionate about building accessible, intuitive user experiences. Proud soldier in United States Army Reserve (25B).
+				<h1>Hi, I'm Alyssa.</h1>
+				<p className='subtle'>Software Engineer passionate about building accessible, intuitive user experiences. Proud soldier in United States Army Reserve (25B).
 					
 				</p>
 

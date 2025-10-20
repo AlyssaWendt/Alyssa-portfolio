@@ -1,6 +1,6 @@
 # Alyssa Wendt Portfolio
 
-A modern, accessible, and visually engaging portfolio built with Next.js App Router, TypeScript, and Sass. Designed for frontend engineers who value clean code, performance, and great user experience.
+A modern, accessible, and visually engaging portfolio built with Next.js App Router, TypeScript, and Sass. Designed for Software Engineers who value clean code, performance, and great user experience.
 
 ---
 
@@ -72,7 +72,7 @@ npm run dev
 
 ## 👋 Contact
 **Alyssa Wendt**  
-Frontend Engineer  
+Software Engineer  
 [LinkedIn](https://www.linkedin.com/in/alyssawendt) • [GitHub](https://github.com/AlyssaWendt)
 
 ---
