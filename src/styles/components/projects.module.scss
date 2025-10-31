@@ -16,21 +16,34 @@
     padding: 1.5rem;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    transition: transform .15s ease, box-shadow .15s ease;
+    justify-content: flex-start;
+    transition: transform .15s ease, box-shadow .15s ease, height .3s ease;
     width: 100%;
     max-width: 380px;
+    position: relative;
+    height: 260px;
+    overflow: hidden;
 
     &:hover, &:focus-within {
         transform: translateY(-4px);
         box-shadow: $shadow-soft;
+        z-index: 10;
+        height: 450px;
+        
+        .cardDetails {
+            opacity: 1;
+            transform: translateY(0);
+            pointer-events: auto;
+        }
     }
 
     .cardDetails {
-        max-height: 0;
+        position: relative;
         opacity: 0;
-        overflow: hidden;
-        transition: max-height 0.3s, opacity 0.3s;
+        transform: translateY(10px);
+        transition: opacity 0.3s ease, transform 0.3s ease;
+        pointer-events: none;
+        margin-top: 1rem;
     }
 
     .cover {
@@ -61,12 +74,6 @@
     .cta:hover, .cta:focus {
         transform: translateY(-1px);
     }
-}
-
-.card:hover .cardDetails,
-.card:focus-within .cardDetails {
-    max-height: 200px;
-    opacity: 1;
 }
 
 

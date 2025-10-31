@@ -15,5 +15,13 @@ export const projects: Project[] = [
 		repo: 'https://github.com/AlyssaWendt/ev-estimator',
 		tech: ['React', 'TypeScript', 'Sass'],
 		title: 'EV Cost Savings Estimator'
+	},
+	{
+		blurb: 'Wordle clone with animations, keyboard controls, and AI word generation.',
+		cover: 'wordle-cover.png',
+		demo: 'https://wordle-xi-six.vercel.app/',
+		repo: 'https://github.com/AlyssaWendt/Wordle',
+		tech: ['TypeScript', 'Sass', 'Vite', 'OpenAI API'],
+		title: 'Interactive Wordle Game'
 	}
 ]
