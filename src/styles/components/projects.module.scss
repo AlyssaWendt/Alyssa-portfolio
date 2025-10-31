@@ -76,7 +76,12 @@
     }
 }
 
-
+@media (min-width: 1200px) {
+    .grid {
+        justify-content: flex-start;
+        padding-inline-start: 4.25rem;
+    }
+}
 
 :global(html.light){
     .grid {
@@ -88,6 +93,7 @@
             
             .cover {
                 border-radius: .25rem;
+                border: .5px solid rgba(37,99,235,0.85);
             }
 
             .cta-group {
