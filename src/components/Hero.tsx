@@ -28,8 +28,8 @@ export default function Hero() {
 				</div>
 
 				<ul className={styles.socials} aria-label='Social links'>
-					<li><a href='https://github.com/AlyssaWendt' aria-label='GitHub'>GitHub</a></li>
-					<li><a href='https://www.linkedin.com/in/alyssa-wendt/' aria-label='LinkedIn'>LinkedIn</a></li>
+					<li><a href='https://github.com/AlyssaWendt' aria-label='GitHub' target='_blank' rel='noopener noreferrer'>GitHub</a></li>
+					<li><a href='https://www.linkedin.com/in/alyssa-wendt/' aria-label='LinkedIn' target='_blank' rel='noopener noreferrer'>LinkedIn</a></li>
 					<li><a href='/Resume-Portfolio.pdf' aria-label='Resume' target='_blank' rel='noopener noreferrer'>Resume</a></li>
 				</ul>
 			</div>
