@@ -6,7 +6,10 @@ import { Inter } from 'next/font/google'
 
 export const metadata: Metadata = {
 	title: 'Alyssa Wendt – Software Engineer',
-	description: 'Clean, accessible interfaces. Army Reserve (25B).'
+	description: 'Clean, accessible interfaces. Army Reserve (25B).',
+	icons: {
+		icon: '/favicon.svg',
+	}
 }
 
 const inter = Inter({ subsets: ['latin'], weight: ['400', '700'] })
