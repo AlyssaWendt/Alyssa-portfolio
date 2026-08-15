@@ -1,13 +1,23 @@
-
+import Image from 'next/image'
 import styles from '@/styles/components/projects.module.scss'
 import { projects } from '@/data/projects'
 
 export default function Card() {
        return (
 	       <div className={styles.grid}>
-		       {projects.map((p) => (
+		       {projects.map((p, i) => (
 			       <div key={p.title} className={styles.card}>
-				       <img src={p.cover} alt={`${p.title} cover image`} className={styles.cover} />
+				       {p.cover && (
+					       <Image
+						       src={p.cover}
+						       alt={`${p.title} cover image`}
+						       width={380}
+						       height={160}
+						       className={styles.cover}
+						       sizes='(max-width: 640px) 100vw, 380px'
+						       priority={i === 0}
+					       />
+				       )}
 				       <h3>{p.title}</h3>
 				       <div className={styles.cardDetails}>
 					       <p className={styles.blurb}>{p.blurb}</p>
